@@ -1,0 +1,43 @@
+
+<%- include("partials/header") %>
+
+<div class="homePage">
+  <div class="homeTitle">
+    <form class="item" action="/" method="post">
+      <h1 style='text-align: center;'> <%= Title %> </h1>
+      <p style='text-align: center; font-size: 30px; font-family: "Montserrat Medium"; '><%= Paragraph %></p>
+    </form>
+
+      <div class="quote">
+        <h1 id="paragraphQuote">
+          <span>There</span>
+          <span>are</span>
+          <span>no</span>
+          <span>limits</span>
+          <span>to</span>
+          <span>what</span>
+          <span>you</span>
+          <span>can</span>
+          <span>accomplish,</span>
+          <span>except</span>
+          <span>the</span>
+          <span>limits</span>
+          <span>you</span>
+          <span>place</span>
+          <span>on</span>
+          <span>your</span>
+          <span>own</span>
+          <span>thinking.</span>
+        </h1>
+      </div>
+  </div>
+</div>
+
+
+<% PostItems.forEach(function(post){ %>
+    <h1 style='font-family: cursive;'><%=post.title%></h1>
+    <p>
+      <%=post.NewPost.substring(0,100) + " ..."%>
+      <a href="/posts/<%=post.title%>">Read More</a>
+    </p>
+<% }); %>

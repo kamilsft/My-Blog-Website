@@ -1,0 +1,17 @@
+<%- include("partials/header"); %>
+
+<div class="pageTitle">
+  <h1 style='color:Tomato; font-weight: bold; text-align: center;'><%=postTitle%></h1>
+</div>
+
+
+<div class="posts">
+  <% PostItems.forEach(function(post){ %>
+    <h3 style='font-family: cursive; '><%=post.title%></h3>
+    <p><%=post.NewPost%></p>
+  <% }); %>
+</div>
+
+
+
+<%- include("partials/footer"); %>
